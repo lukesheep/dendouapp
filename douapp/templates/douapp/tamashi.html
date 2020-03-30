@@ -1,0 +1,20 @@
+{% extends 'douapp/base.html' %}
+{% block content %}
+<main class="report">
+  <div class="tamashi">
+
+
+  <h1>{{ tama.name}}</h1><br>
+  <b>国籍：</b>{{ tama.country}} <br>
+  <b>性別：</b>{{ tama.sex}}<br>
+  <b>寮：</b><a href="{%url 'p_detail' tama.dormitory %}">{{ tama.dormitory}}</a> {{ tama.room}}<br>
+  <b>学校：</b>{{ tama.school}}<br>
+  <b>伝道者：</b>{{ tama.evangelist}}<br>
+  <b>初めて伝道された：</b>{{ tama.date}}<br>
+  <b>最後に訪問された：</b>{{tama.visit}}<br>
+  <b>ノート </b><br>
+  {{ tama.status}}<br>
+  <a href="{% url 'update' tama.pk %}">情報更新</a>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'douapp/base.html' %}
+{% block content %}
+<main class="report">
+  <h1>報告作成<h1>
+    <div class="report-form">
+
+
+  <form method="post">
+    {% csrf_token %}
+    <label for="">名前</label><br>
+    {{ form.name}}
+    <div class="">
+      <label for="">国籍</label><br>
+      {{ form.country}}<br>
+      <label for="">寮</label><br>
+      {{ form.dormitory}}
+    </div>
+    <div class="">
+      <label for="">性別</label><br>
+      {{ form.sex}}<br>
+      <label for="">部屋番号</label><br>
+      {{ form.room}}
+    </div>
+    <label for="">学校</label><br>
+    {{ form.school}}<br>
+    <label for="">伝道者</label><br>
+    {{ form.evangelist}}<br>
+    <label for="">ノート</label><br>
+    {{ form.status}}<br>
+    <button type="submit" name="button">報告</button>
+
+  </form>
+    </div>
+  </main>
+{% endblock %}

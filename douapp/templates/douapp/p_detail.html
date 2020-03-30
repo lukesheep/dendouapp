@@ -1,0 +1,25 @@
+{% extends 'douapp/base.html' %}
+{% block content %}
+<main>
+<h1>{{ dorm.d_name }}</h1><br>
+<table>
+      <tr>
+        <th>名前</th>
+        <th>寮</th>
+        <th>学校</th>
+        <th>日付</th>
+      </tr>
+      {% for r in list %}
+      <tr>
+        <td><a href="{% url 'tamashi' r.pk %}">{{r.name}}</a></td>
+        <td>{{r.dormitory}} {{r.room}}</td>
+        <td>{{r.school}}</td>
+        <td>{{r.visit}}</td>
+      </tr>
+
+      {% empty %}
+  結果はありません.
+    {% endfor %}
+      </table>
+      </main>
+{% endblock %}

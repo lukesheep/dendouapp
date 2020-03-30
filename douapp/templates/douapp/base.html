@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="jp" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'douapp/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <title>伝道アプリ</title>
+  </head>
+  <body>
+    <nav>
+      <a href="{% url 'report' %}">報告</a><br>
+      <a href="{% url 'search' %}">検索</a><br>
+      <a href="{% url 'dormitop' %}">場所</a><br>
+      <a href="{% url 'owntama' %}">履歴</a><br>
+      {% if user.is_authenticated %}
+      <a href="{%url 'logout'%}">退出</a><br>
+      {% else %}
+      <a href="{%url 'login'%}">登录</a><br>
+      {% endif %}
+    </nav>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+  </body>
+</html>

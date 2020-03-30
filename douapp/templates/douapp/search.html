@@ -1,0 +1,42 @@
+{% extends 'douapp/base.html' %}
+{% block content %}
+<main>
+
+<h1>検索<h1><br>
+<div class="search-container">
+    <div class="search1">
+      <img src="/static/douapp/donation.svg" alt="" width="240">
+      <form method="post">
+		      {% csrf_token %}
+          {{ form }}
+          <input id="type" type="hidden" name="type" value="name">
+          <br>
+          <button type="submit">名前検索</button>
+      </form>
+
+    </div>
+    <div class="search2">
+      <img src="/static/douapp/building.svg" alt="" width="240">
+      <form method="post">
+          {% csrf_token %}
+          {{ form }}
+          <input id="type" type="hidden" name="type" value="dorm">
+          <br>
+          <button type="submit">寮検索</button>
+      </form>
+
+    </div>
+    <div class="search3">
+      <img src="/static/douapp/university.svg" alt="" width="240">
+      <form method="post">
+          {% csrf_token %}
+          {{ form }}
+          <input id="type" type="hidden" name="type" value="school">
+          <br>
+          <button type="submit">学校検索</button>
+      </form>
+
+    </div>
+</div>
+</main>
+{% endblock %}

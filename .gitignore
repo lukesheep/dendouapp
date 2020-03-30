@@ -1,0 +1,10 @@
+denapp/__init__.py
+denapp/__pycache__
+denapp/settings.py
+denapp/wsgi.py
+
+douapp/__init__.py
+douapp/migrations
+douapp/static
+douapp/__pycache__
+db.sqlite3

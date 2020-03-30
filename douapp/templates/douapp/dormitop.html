@@ -1,0 +1,24 @@
+{% extends 'douapp/base.html' %}
+{% block content %}
+<main>
+
+<h1>場所から探す<h1><br>
+  <div class="dorm-container">
+    <div class="ku1">
+      <a href="{% url 'place' '下京区' %}">下京区</a>
+      <a href="{% url 'place' '南区' %}">南区</a>
+      <a href="{% url 'place' '左京区' %}">左京区</a>
+      <a href="{% url 'place' '北区' %}">北区</a>
+      <a href="{% url 'place' '西京区' %}">西京区</a>
+    </div>
+    <div class="ku2">
+      <a href="{% url 'place' '伏見区' %}">伏見区</a>
+      <a href="{% url 'place' '右京区' %}">右京区</a>
+      <a href="{% url 'place' '上京区' %}">上京区</a>
+      <a href="{% url 'place' '中京区' %}">中京区</a>
+      <a href="{% url 'place' '東山区' %}">東山区</a>
+      <a href="{% url 'place' '山科区' %}">山科区</a>
+    </div>
+  </div>
+  </main>
+{% endblock %}
